@@ -1,0 +1,312 @@
+#infoBar {
+    height: 40px;
+    width: 100%;
+    background: #ecf8ff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 16px;
+    color: #409eff;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  }
+
+  #sketchOuter {
+    position: relative;
+    top: 40px;
+    padding-bottom: 48px;
+  }
+
+  #sketch {
+    position: relative;
+    height: 320px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #b3d8ff;
+    box-sizing: border-box;
+  }
+
+  /* 不需要设置background,canvas默认透明背景 */
+  #canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  #backCanvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  #talkCont {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    background-color: #F2F6FC;
+    overflow: hidden;
+  }
+
+  #talkText {
+    font-size: 16px;
+    color: #409eff;
+    position: absolute;
+    word-break: keep-all;
+    white-space: nowrap;
+    line-height: 40px;
+    left: 100%;
+  }
+
+  #palette,
+  #brushSizeBar {
+    position: absolute;
+    width: 100%;
+    bottom: 48px;
+    background-color: #ecf8ff;
+    color: #444;
+    padding: 20px 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .paletteItem {
+    padding: 10px 0;
+    width: 20%;
+  }
+
+  .paletteItemIcon {
+    border: 1px solid #409eff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .brushSizeItem {
+    width: 20%;
+    height: 60px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .brushSizeIcon {
+    position: relative;
+    background-color: #409eff;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .brushSizeLabel {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+
+  #toolBar {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #ecf8ff;
+    border-bottom: 1px solid #b3d8ff;
+    display: flex;
+    align-items: center;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); */
+  }
+
+  .tool {
+    width: 16.66666%;
+    padding: 10px 0;
+    height: 40px;
+    position: relative;
+  }
+
+  #colorSample {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #bcd8ff;
+    margin: auto;
+  }
+
+  #brushSample {
+    border-radius: 50%;
+    background: #409eff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .iconfont {
+    font-size: 24px !important;
+  }
+
+  .toolLabel {
+    text-align: center;
+    width: 100%;
+    color: #409eff;
+    line-height: 40px;
+  }
+
+  #playersOuter {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 16px 8px 0 8px; */
+  }
+
+  #playerGroup {
+    margin: 24px 0 48px 0;
+  }
+
+  .playerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 33.3333%;
+    padding: 12px 8px;
+    box-sizing: border-box;
+    /* flex:1; */
+    /* padding-bottom: 16px; */
+  }
+
+  .playerCont {
+    font-size: 14px;
+    width: 100%;
+    color: #409eff;
+    background-color:#ecf8ff;
+    padding: 8px 8px;
+    /* max-width: 90px; */
+    box-sizing: border-box;
+    text-align: center;
+    /* border-radius: 3px; */
+    /* margin: 16px 12px 0 0; */
+    position: relative;
+    border: 1px #b3d8ff solid;
+  }
+
+  .playerInfoWrapper {
+    margin: 4px 0px 0 0;
+    display: flex;
+    align-items: center;
+    /* padding-right: 12px; */
+  }
+
+  .drawer {
+    background: #409eff;
+    color: #fff;
+    border: 1px #409eff solid;
+  }
+
+  .playerInfo {
+    font-size: 12px;
+    background-color: #409eff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 1px 3px;
+  }
+
+  .playerScore {
+    font-size: 13px;
+    color: #409eff;
+  }
+
+  #outputLabel, #endRoundCont {
+    position: absolute;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    top: 50%;
+    padding: 8px 0px;
+    transform: translateY(-50%);
+    background-color: #ecf8ff;
+    color: #409eff;
+  }
+
+  #endRoundText {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  #talkInput {
+    font-size: 16px;
+  }
+
+  #endGameLayer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #endGamePanel {
+    width: 85%;
+  }
+
+  #endGameTitle {
+    height: 48px;
+    background: #409eff;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    line-height: 48px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .rankRow {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #409eff;;
+    padding: 12px 12px;
+    font-size: 16px;
+    border-bottom: 1px #b3d8ff solid;
+  }
+
+  .rankTitle {
+    color: #909399;
+    font-size: 16px;
+    flex: 1;
+  }
+
+  .bluebg {
+    background: #ecf8ff;
+    color: #409eff;
+  }
+
+  #backCont {
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    padding: 12px;
+    /* height: 60px; */
+  }
+
+  #backBtn {
+    height: 32px;
+    margin-top: 0;
+    padding: 3px 6px;
+  }

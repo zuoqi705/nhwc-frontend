@@ -1,0 +1,31 @@
+#gameTitle {
+  color: #409eff;
+  background: #ecf8ff;
+  font-size: 28px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+}
+
+.groupTitle {
+  color: #409eff !important;
+  font-size: 16px !important;
+  padding-left: 16px !important;
+}
+
+.primaryBtn {
+  width: 93% !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.flex1 {
+  flex: 1
+}
+
+.ellipsis {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
