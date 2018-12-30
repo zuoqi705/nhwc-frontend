@@ -1,6 +1,6 @@
 # nhwc-frontend
 
-> 你画我猜小游戏（毕业设计）
+> 你画我猜小游戏（毕业设计）前端部分
 
 ## Build Setup
 
