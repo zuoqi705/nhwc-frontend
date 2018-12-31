@@ -6,7 +6,7 @@ export default { //接受服务端传来的信息
       sessionStorage.setItem('userInfo', JSON.stringify(this.userInfo));
       console.log('sessionUserInfo2:', JSON.parse(sessionStorage.getItem('userInfo')));
     }
-    if (!this.userInfo.uid) this.$socket.emit('newUser', true);
+    // if (!this.userInfo.uid) this.$socket.emit('newUser', true);
   },
   userInfo: function (msg) {
     if (!this.userInfo.uid) {

@@ -1,0 +1,111 @@
+  #seatCont {
+    /* background-color: #efefef; */
+    padding-bottom: 30px;
+  }
+
+  #roomHeader {
+    height: 50px;
+    padding: 8px;
+    background: #ecf8ff;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  #logo {
+    margin: 0 8px 0 6px;
+    width: 48px;
+    height: 48px;
+  }
+
+  #titleCont {
+    flex: 1;
+    color: #409eff;
+  }
+
+  #roomTitle {
+    font-size: 18px;
+  }
+
+  #roomName {
+    font-size: 14px;
+    /* line-height: 20px; */
+  }
+
+  #btnCont {
+    display: flex;
+  }
+
+  #seatOutput {
+    padding: 4px 16px;
+    background:#286db4;
+    color: #fff;
+    position: relative;
+    top:-44px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+  }
+
+  .outBtnSeat {
+    margin-bottom: 6px;
+    padding: 2px;
+    box-sizing: border-box;
+  }
+
+  .btnSeat {
+    background-color: #d9ebff;
+    border-radius: 3px;
+    box-shadow: 0px 7px 0px #96caff;
+    color: #409eff;
+    text-align: center;
+    font-size: 14px;
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 12px;
+  }
+
+  .btnSitSeat {
+    background-color: #c1deff;
+    box-shadow: 0px 3px 0px #78b9fa;
+    position: relative;
+    top: 3px;
+  }
+
+  #startBtn {
+    margin: 18px auto 0;
+  }
+
+  #talkInput {
+    font-size: 16px;
+  }
+
+  #talkCont {
+    width: 100%;
+    height: 40px;
+    background-color: #ecf8ff;
+    overflow: hidden;
+  }
+
+  #talkText {
+    position: absolute;
+    word-break: keep-all;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 40px;
+    color: #409eff;
+    left: 100%;
+  }
+
+  .playerContent {
+    font-size: 14px;
+    color: #409eff;
+    background-color: #ecf8ff;
+    padding: 4px 8px;
+    border-radius: 2px;
+    margin: 12px 12px 0 0;
+  }

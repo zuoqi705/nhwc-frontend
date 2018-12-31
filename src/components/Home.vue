@@ -131,6 +131,7 @@
       if (JSON.parse(sessionStorage.getItem('userInfo'))) {
         this.userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
       }
+      if (!this.userInfo.uid) this.$socket.emit('newUser', true);
       console.log('sessionUserInfo1:', JSON.parse(sessionStorage.getItem(
         'userInfo')));
       this.createdRoom = sessionStorage.getItem('createdRoom');

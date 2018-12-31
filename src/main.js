@@ -8,7 +8,8 @@ import VueSocketIO from 'vue-socket.io';
 // import socketio from 'socket.io-client';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import  Velocity from 'velocity-animate';
+import Velocity from 'velocity-animate';
+import VueClipboard from 'vue-clipboard2'
 import './assets/iconfont/iconfont.css';
 import './styles/global.css'
 import router from './router'
@@ -28,6 +29,7 @@ import {
   XInput,
   FlexboxItem,
 } from 'vux'
+import { from } from 'array-flatten';
 
 Vue.component('x-button', XButton)
 Vue.component('flexbox', Flexbox)
@@ -45,19 +47,41 @@ Vue.use(AlertPlugin)
 Vue.use(ToastPlugin, {time:'1000'})
 
 Vue.use(VueAxios, axios);
+Vue.use(VueClipboard)
 
 axios.defaults.baseURL = 'http://47.106.227.84:4000'
 // Vue.use(VueSocketio, socketio('abc.zhaozuoqi.com:4000')); //服务器
 Vue.use(new VueSocketIO({
-  debug: true,
+  debug: false,
   connection: 'abc.zhaozuoqi.com:4000',
 }))
-
 // Vue.use(VueSocketio, socketio('localhost:4000')); //本地
 
 FastClick.attach(document.body)
 
 Vue.config.productionTip = false
+
+//全局导航守卫
+router.beforeEach((to, from, next) => {
+  if (to.name == 'Room') {
+    console.log('to:', to);
+    if (JSON.parse(sessionStorage.getItem(
+      'userInfo'))) {
+        console.log('inininin')
+        next();
+      } else {
+        next({
+          path: '/inputname',
+          replace: true,
+          query: {
+            roomId: to.params.roomId
+          }
+        })
+      }
+  } else {
+    next();
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({
