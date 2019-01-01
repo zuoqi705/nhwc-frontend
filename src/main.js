@@ -5,7 +5,7 @@ import FastClick from 'fastclick'
 import App from './App'
 import 'lib-flexible/flexible'
 import VueSocketIO from 'vue-socket.io';
-// import socketio from 'socket.io-client';
+import socketio from 'socket.io-client'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Velocity from 'velocity-animate';
@@ -50,11 +50,11 @@ Vue.use(VueAxios, axios);
 Vue.use(VueClipboard)
 
 axios.defaults.baseURL = 'http://47.106.227.84:4000'
-// Vue.use(VueSocketio, socketio('abc.zhaozuoqi.com:4000')); //服务器
-Vue.use(new VueSocketIO({
-  debug: false,
-  connection: 'abc.zhaozuoqi.com:4000',
-}))
+Vue.use(VueSocketIO, socketio('http://abc.zhaozuoqi.com:4000')); //服务器
+// Vue.use(new VueSocketIO({
+//   debug: false,
+//   connection: 'abc.zhaozuoqi.com:4000',
+// }))
 // Vue.use(VueSocketio, socketio('localhost:4000')); //本地
 
 FastClick.attach(document.body)
