@@ -135,9 +135,13 @@
       console.log('sessionUserInfo1:', JSON.parse(sessionStorage.getItem(
         'userInfo')));
       this.createdRoom = sessionStorage.getItem('createdRoom');
-      this.rooms = JSON.parse(sessionStorage.getItem('rooms')) ? JSON.parse(
-        sessionStorage.getItem('rooms')) : [];
-      console.log('sessionRoomsInfo', this.rooms);
+      // this.rooms = JSON.parse(sessionStorage.getItem('rooms')) ? JSON.parse(
+      //   sessionStorage.getItem('rooms')) : [];
+      this.axios.get("/getRooms").then(res => {
+				console.log("​mounted -> res", res)
+        this.rooms = res.data;
+        console.log('roomsInfo', this.rooms);
+      })
     }
   }
 
