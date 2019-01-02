@@ -59,7 +59,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - **如何保存用户信息？**
 
-  通过sessionStorage保存，每当进入Home页面时，查看sessionStorage中是否还有userInfo，没有的话则发出newUser的请求。
+  通过sessionStorage保存，每当进入Home页面时，查看sessionStorage中是否还有userInfo，没有的话则发出newUser的请求。 
 
 - **如何实现多人聊天？**
 
@@ -72,6 +72,19 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - **如何监听到disconnect事件后实现离开房间功能？**
 
   通过离开房间时的socketId实现追踪删除。
+
+- **如何实现画布实时通信？**
+
+  通过不断传输相对于画布的坐标，调用moveTo()和lineTo()函数来实现。
+
+- **如何实现节省画布传输数据？**
+
+  - 使用throttle节流函数，每隔固定时间传输当前画布坐标
+  - 使用两张画布，减少调用redrawUndoCanvas()函数时的操作
+
+- **如何实现redo和undo功能？**
+
+  首先通过currStroke数组将那一笔的所有坐标存起来，再通过undoStrokes和redoStrokes两个存储可以undo和redo的笔。
 
 
 ## 论文中要写的原理部分
